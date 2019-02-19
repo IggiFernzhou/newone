@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<!-- 在spring容器中配置各种bean(service/dao/domain(pojo)/action/数据源 等 -->
+	<!--bean元素的作用是：当spring框架加载时候，
+	spring就会自动的创建一个bean对象，并放入内存管理起来 -->
+	<!-- <bean></bean>就相当于UserService us=new UserService();; -->
+	<bean id="useSercice" class="com.service.UserService">
+		<!-- 下面的属性相当于us.setName("spring"); -->
+		<property name="name">
+			<value>spring</value>
+		</property>
+	</bean>
+</beans>
